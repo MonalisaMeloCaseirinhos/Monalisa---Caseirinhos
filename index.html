@@ -6,11 +6,13 @@
 <title>Monalisa Melo Caseirinhos | Biscoitinhos amanteigados personalizados</title>
 <meta name="description" content="Biscoitinhos amanteigados feitos à mão, com o seu nome, a sua logo e o laço da sua festa. Peça pelo WhatsApp.">
 <meta name="theme-color" content="#F8E7E4">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍪</text></svg>">
+<link rel="icon" type="image/png" href="img/logo.png">
+<meta property="og:image" content="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="tema.js"></script>
 </head>
 <body>
 
@@ -48,11 +50,12 @@
 
 <header>
   <div class="wrap bar">
-    <a class="logo" href="#topo" aria-label="Monalisa Melo Caseirinhos">Monalisa Melo<small>caseirinhos</small></a>
+    <a class="logo" href="#topo" aria-label="Monalisa Melo Caseirinhos"><img src="img/logo.png" alt="" width="56" height="56"><span>Monalisa Melo<small>caseirinhos</small></span></a>
     <nav aria-label="Principal">
       <a href="#produtos">O que fazemos</a>
       <a href="#como">Como pedir</a>
       <a href="#duvidas">Dúvidas</a>
+      <button class="theme" id="tema" type="button" aria-label="Ativar tema escuro"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <a class="btn" href="#pedido">Fazer pedido</a>
     </nav>
   </div>
@@ -90,20 +93,20 @@
         <p>Todo biscoito pode levar o seu nome, uma frase ou a sua logo gravada na massa.</p>
       </div>
 
-      <!-- Para usar suas fotos: coloque o caminho em data-photo (ex.: data-photo="img/foto1.jpg") -->
+      <!-- Fotos: ficam na pasta img/. Para trocar, mude o caminho em data-photo -->
       <div>
         <article class="row">
-          <div class="media" data-photo="" data-alt="Biscoitos com logo gravada" style="--bg:#F8E7E4;--r:#B8893C"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#cookie"/></svg></div>
+          <div class="media" data-photo="img/biscoito-marca.jpg" data-alt="Biscoitos amanteigados com a logo gravada na massa" style="--bg:#F8E7E4;--r:#B8893C"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#cookie"/></svg></div>
           <div><h3>Biscoito com a sua marca</h3><p>Nome, logo ou frase gravados na massa. Ótimo para casamentos, eventos e lojas que querem presentear clientes.</p></div>
           <a class="btn ghost pick" href="#pedido" data-kind="Biscoito com marca">Pedir este</a>
         </article>
         <article class="row">
-          <div class="media" data-photo="" data-alt="Biscoitos em saquinho com laço" style="--bg:#E4EAF8;--r:#1F3A8A"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#heart"/></svg></div>
+          <div class="media" data-photo="img/lembrancinha-saquinho.jpg" data-alt="Biscoitos em formato de coração em saquinho com laço de cetim" style="--bg:#E4EAF8;--r:#1F3A8A"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#heart"/></svg></div>
           <div><h3>Lembrancinha no saquinho</h3><p>Biscoitos embalados individualmente, com laço na cor da festa. Chega pronta para entregar aos convidados.</p></div>
           <a class="btn ghost pick" href="#pedido" data-kind="Lembrancinha no saquinho">Pedir este</a>
         </article>
         <article class="row">
-          <div class="media" data-photo="" data-alt="Pote de presente com biscoitos" style="--bg:#EFE6F7;--r:#8F6BC2"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#jar"/></svg></div>
+          <div class="media" data-photo="img/pote-presente.jpg" data-alt="Potes transparentes cheios de biscoitos para presentear" style="--bg:#EFE6F7;--r:#8F6BC2"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#jar"/></svg></div>
           <div><h3>Pote para presentear</h3><p>Biscoitinhos num pote transparente fechado com laço de cetim. Um presente bonito para datas especiais.</p></div>
           <a class="btn ghost pick" href="#pedido" data-kind="Pote para presente">Pedir este</a>
         </article>
@@ -167,7 +170,7 @@
 
 <footer>
   <div class="wrap">
-    <div><span class="logo">Monalisa Melo</span><p>Biscoitinhos amanteigados feitos à mão.</p></div>
+    <div class="brand"><img src="img/logo.png" alt="Selo Monalisa Melo Caseirinhos" width="96" height="96"><p>Biscoitinhos amanteigados feitos à mão.</p></div>
     <div class="links">
       <a href="https://www.instagram.com/monalisamelo.caseirinhos/" target="_blank" rel="noopener">Instagram @monalisamelo.caseirinhos</a>
       <a href="#pedido">Pedir pelo WhatsApp</a>
