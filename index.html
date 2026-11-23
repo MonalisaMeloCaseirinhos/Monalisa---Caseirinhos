@@ -33,20 +33,30 @@
       <use href="#bow"/>
     </symbol>
     <!-- Laço do selo: igual ao laço normal, mas com as pontas mais curtas para ficar rente à foto -->
-    <g id="bow-selo" fill="currentColor">
-      <path d="M100 40C68 4 36 28 60 48c15 11 34 2 40-8z"/>
-      <path d="M100 40c32-36 64-12 40 8-15 11-34 2-40-8z"/>
-      <path d="M96 50 86 70l8-3 5 7z"/><path d="M104 50l10 20-8-3-5 7z"/>
-      <circle cx="100" cy="43" r="10"/>
-      <path d="M100 43c-14-14-24-8-30-1M100 43c14-14 24-8 30-1" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5" stroke-linecap="round"/>
+    <g id="bow-selo" fill="currentColor" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke">
+      <!-- pontas (atrás), com corte em V -->
+      <path d="M97 50C90 64 80 78 68 94l16-2 5 11c8-15 14-31 16-50z"/>
+      <path d="M103 50c7 14 17 28 29 44l-16-2-5 11c-8-15-14-31-16-50z"/>
+      <!-- laçadas -->
+      <path d="M100 46C86 24 54 14 40 28 30 40 44 62 68 58c16-3 26-8 32-12z"/>
+      <path d="M100 46c14-22 46-32 60-18 10 12-4 34-28 30-16-3-26-8-32-12z"/>
+      <!-- dobras e brilho (sem contorno) -->
+      <g stroke="none">
+        <path d="M100 46C88 36 72 32 58 38c14-2 30 2 42 8z" fill="#000" fill-opacity=".16"/>
+        <path d="M100 46c12-10 28-14 42-8-14-2-30 2-42 8z" fill="#000" fill-opacity=".16"/>
+        <path d="M52 30c-6 4-8 10-4 15-2-7 0-12 4-15zM148 30c6 4 8 10 4 15 2-7 0-12-4-15z" fill="#fff" fill-opacity=".35"/>
+      </g>
+      <!-- nó -->
+      <ellipse cx="100" cy="47" rx="11" ry="10"/>
+      <path d="M94 43c3-3 9-3 12 0" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="2.5" stroke-linecap="round" paint-order="normal"/>
     </g>
-    <!-- Selo com a foto (img/foto.jpg) recortada em círculo. A borda usa currentColor, então acompanha a cor do laço -->
+    <!-- Selo com a foto (img/foto.jpg) recortada em círculo, com o laço na parte inferior. A borda usa currentColor, então acompanha a cor do laço -->
     <symbol id="selo" viewBox="0 0 200 200">
-      <clipPath id="selo-recorte"><circle cx="100" cy="120" r="78"/></clipPath>
-      <circle cx="100" cy="120" r="78" fill="#fff"/>
-      <image href="img/foto.jpg" x="22" y="42" width="156" height="156" clip-path="url(#selo-recorte)"/>
-      <circle cx="100" cy="120" r="78" fill="none" stroke="currentColor" stroke-width="4"/>
-      <use href="#bow-selo" transform="translate(37 10.7) scale(.63)"/>
+      <clipPath id="selo-recorte"><circle cx="100" cy="82" r="78"/></clipPath>
+      <circle cx="100" cy="82" r="78" fill="#fff"/>
+      <image href="img/foto.jpg" x="22" y="4" width="156" height="156" clip-path="url(#selo-recorte)"/>
+      <circle cx="100" cy="82" r="78" fill="none" stroke="currentColor" stroke-width="4"/>
+      <use href="#bow-selo" transform="translate(32 124) scale(.68)"/>
     </symbol>
     <symbol id="heart" viewBox="0 0 200 200">
       <path d="M100 182C18 124 12 62 54 48c26-8 46 10 46 26 0-16 20-34 46-26 42 14 36 76-46 134z" fill="#F3DFB6" stroke="#E2C48C" stroke-width="3"/>
