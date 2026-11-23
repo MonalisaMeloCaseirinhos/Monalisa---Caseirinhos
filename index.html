@@ -32,7 +32,7 @@
       <text x="100" y="134" text-anchor="middle" font-family="Instrument Serif,Georgia,serif" font-style="italic" font-size="62" fill="#C9A265">MM</text>
       <use href="#bow"/>
     </symbol>
-
+    <!-- Laço do selo: igual ao laço normal, mas com as pontas mais curtas para ficar rente à foto -->
     <g id="bow-selo" fill="currentColor">
       <path d="M100 40C68 4 36 28 60 48c15 11 34 2 40-8z"/>
       <path d="M100 40c32-36 64-12 40 8-15 11-34 2-40-8z"/>
@@ -40,12 +40,12 @@
       <circle cx="100" cy="43" r="10"/>
       <path d="M100 43c-14-14-24-8-30-1M100 43c14-14 24-8 30-1" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5" stroke-linecap="round"/>
     </g>
-
+    <!-- Selo com a foto (img/foto.jpg) recortada em círculo. A borda usa currentColor, então acompanha a cor do laço -->
     <symbol id="selo" viewBox="0 0 200 200">
       <clipPath id="selo-recorte"><circle cx="100" cy="120" r="78"/></clipPath>
       <circle cx="100" cy="120" r="78" fill="#fff"/>
-      <image href="img/logo.png" x="3.5" y="23.3" width="198.3" height="198.7" clip-path="url(#selo-recorte)"/>
-      <circle cx="100" cy="120" r="78" fill="none" stroke="#E2C48C" stroke-width="3"/>
+      <image href="img/foto.jpg" x="22" y="42" width="156" height="156" clip-path="url(#selo-recorte)"/>
+      <circle cx="100" cy="120" r="78" fill="none" stroke="currentColor" stroke-width="4"/>
       <use href="#bow-selo" transform="translate(37 10.7) scale(.63)"/>
     </symbol>
     <symbol id="heart" viewBox="0 0 200 200">
@@ -89,7 +89,7 @@
         </div>
       </div>
       <div class="stage">
-        <svg class="cookie-big" id="heroCookie" viewBox="0 0 200 200" role="img" aria-label="Selo Monalisa Melo Caseirinhos com laço"><use href="#selo"/></svg>
+        <svg class="cookie-big" id="heroCookie" viewBox="0 0 200 200" role="img" aria-label="Foto de uma mulher sorrindo, segurando uma lembrancinha com laço vermelho"><use href="#selo"/></svg>
         <div class="picker">
           <p>Toque para escolher a cor do laço: <b id="ribName">Rosa</b></p>
           <div class="sw" id="sw" role="group" aria-label="Cor do laço"></div>
