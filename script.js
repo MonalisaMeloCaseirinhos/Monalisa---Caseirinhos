@@ -1,7 +1,7 @@
-// ===== TROQUE AQUI: número com código do país + DDD, só dígitos (ex.: 5518999999999)
-const WHATS = "5518981390512";
 
-// Se os emojis ainda aparecerem como � no WhatsApp, troque true por false
+const WHATS = "5518997791322";
+
+
 const USAR_EMOJIS = true;
 const em = codigo => USAR_EMOJIS ? String.fromCodePoint(codigo) + " " : "";
 
@@ -25,17 +25,16 @@ CORES.forEach(([nome, hex], i) => {
   sw.appendChild(b);
 });
 
-// Fotos reais: se data-photo tiver um caminho, a foto substitui o desenho
+
 document.querySelectorAll("[data-photo]").forEach(el => {
   if (el.dataset.photo) el.innerHTML = `<img src="${el.dataset.photo}" alt="${el.dataset.alt || ""}" loading="lazy">`;
 });
 
-// Botões "Pedir este" já escolhem o item no formulário
+
 document.querySelectorAll(".pick").forEach(a => a.addEventListener("click", () => {
   document.getElementById("tipo").value = a.dataset.kind;
 }));
 
-// Monta a mensagem e abre o WhatsApp
 document.getElementById("form").addEventListener("submit", e => {
   e.preventDefault();
   const f = new FormData(e.target);
