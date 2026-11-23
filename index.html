@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<!-- Desenhos reutilizáveis: o laço usa a cor atual (currentColor) -->
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <g id="bow" fill="currentColor">
@@ -31,6 +31,22 @@
       <circle cx="100" cy="112" r="63" fill="none" stroke="#E2C48C" stroke-width="1.6" stroke-dasharray="3 6"/>
       <text x="100" y="134" text-anchor="middle" font-family="Instrument Serif,Georgia,serif" font-style="italic" font-size="62" fill="#C9A265">MM</text>
       <use href="#bow"/>
+    </symbol>
+
+    <g id="bow-selo" fill="currentColor">
+      <path d="M100 40C68 4 36 28 60 48c15 11 34 2 40-8z"/>
+      <path d="M100 40c32-36 64-12 40 8-15 11-34 2-40-8z"/>
+      <path d="M96 50 86 70l8-3 5 7z"/><path d="M104 50l10 20-8-3-5 7z"/>
+      <circle cx="100" cy="43" r="10"/>
+      <path d="M100 43c-14-14-24-8-30-1M100 43c14-14 24-8 30-1" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+
+    <symbol id="selo" viewBox="0 0 200 200">
+      <clipPath id="selo-recorte"><circle cx="100" cy="120" r="78"/></clipPath>
+      <circle cx="100" cy="120" r="78" fill="#fff"/>
+      <image href="img/logo.png" x="3.5" y="23.3" width="198.3" height="198.7" clip-path="url(#selo-recorte)"/>
+      <circle cx="100" cy="120" r="78" fill="none" stroke="#E2C48C" stroke-width="3"/>
+      <use href="#bow-selo" transform="translate(37 10.7) scale(.63)"/>
     </symbol>
     <symbol id="heart" viewBox="0 0 200 200">
       <path d="M100 182C18 124 12 62 54 48c26-8 46 10 46 26 0-16 20-34 46-26 42 14 36 76-46 134z" fill="#F3DFB6" stroke="#E2C48C" stroke-width="3"/>
@@ -73,7 +89,7 @@
         </div>
       </div>
       <div class="stage">
-        <svg class="cookie-big" id="heroCookie" viewBox="0 0 200 200" role="img" aria-label="Biscoito amanteigado com laço"><use href="#cookie"/></svg>
+        <svg class="cookie-big" id="heroCookie" viewBox="0 0 200 200" role="img" aria-label="Selo Monalisa Melo Caseirinhos com laço"><use href="#selo"/></svg>
         <div class="picker">
           <p>Toque para escolher a cor do laço: <b id="ribName">Rosa</b></p>
           <div class="sw" id="sw" role="group" aria-label="Cor do laço"></div>
@@ -93,7 +109,7 @@
         <p>Todo biscoito pode levar o seu nome, uma frase ou a sua logo gravada na massa.</p>
       </div>
 
-      <!-- Fotos: ficam na pasta img/. Para trocar, mude o caminho em data-photo -->
+
       <div>
         <article class="row">
           <div class="media" data-photo="img/biscoito-marca.jpg" data-alt="Biscoitos amanteigados com a logo gravada na massa" style="--bg:#F8E7E4;--r:#B8893C"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#cookie"/></svg></div>
