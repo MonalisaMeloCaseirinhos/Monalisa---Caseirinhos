@@ -1,5 +1,5 @@
 
-const WHATS = "5518997791322";
+const WHATS = "5518981390512";
 
 
 const USAR_EMOJIS = true;
